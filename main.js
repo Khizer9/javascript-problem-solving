@@ -212,3 +212,144 @@
 //   }
   
 //   longestWord("I love programming in JavaScript");
+
+
+
+// Write a function that takes a string as input and returns the string reversed.
+// reverseString("hello"); // Output: "olleh"
+// reverseString("JavaScript"); // Output: "tpircSavaJ"
+
+// function reversedStr(str) {
+//   const revStr = str.split("").reverse().join("")
+
+//   console.log(revStr)
+// }
+
+// function reversedStr(str){
+//     let result = "";
+//     for(let i = str.length - 1 ; i >=0; i--){
+//       result = result + str[i]
+//     }
+//       console.log(result)
+//   }
+  
+//   reversedStr("hello") //"olleh"
+
+
+
+// Write a function that checks if a number is prime. (prime number means jo sirf 1 aur khud se divisible ho)
+// isPrime(7); // Output: true (7 is a prime number)
+// isPrime(10); // Output: false (10 is not a prime number)
+
+
+// function isPrime(num) {
+//     if (num <= 1) return "Not a prime number"; // Numbers <= 1 are not prime
+//     if (num === 2) return "Prime number"; // 2 is the only even prime number
+  
+//     for (let i = 2; i <= Math.sqrt(num); i++) {
+//       if (num % i === 0) {
+//         return "Not a prime number"; // Found a divisor
+//       }
+//     }
+  
+//     return "Prime number"; // No divisors found
+//   }
+  
+//   console.log(isPrime(10)); // Output: "Not a prime number"
+//   console.log(isPrime(7));  // Output: "Prime number"
+//   console.log(isPrime(1));  // Output: "Not a prime number"
+//   console.log(isPrime(2));  // Output: "Prime number"
+  
+
+
+// Question: Find Factorial of a Number
+// Write a function to calculate the factorial of a given number.
+// The factorial of a number n is the product of all positive integers less than or equal to 𝑛.
+// For example: 
+// The factorial of 5 is 5*4*3*2*1 = 120
+
+// function factorialNum (num) {
+//     let result = 1
+//     for(let i = 1;i<=num; i++){
+//       result = result * i
+//     }
+//     console.log(result)
+//   }
+  
+//   factorialNum(5)
+
+
+// Write a function that generates the first n numbers of the Fibonacci sequence.
+
+// The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, starting from 0 and 1. For example:
+// Fibonacci sequence for n = 7: [0, 1, 1, 2, 3, 5, 8]
+
+// function fibonciSeries(num){
+//     const initialArr = [0, 1]
+//     for(let i = 1; i < num - 1; i++ ){
+//       initialArr.push(initialArr[i] + initialArr[i - 1])
+//     }
+//     return initialArr
+//   }
+  
+//   fibonciSeries(7)
+  
+  
+
+// Given an array of n-1 integers in the range from 1 to n, find the missing number. The array contains no duplicates, and exactly one number is missing from the sequence.
+
+// For example:
+// Input: [1, 2, 4, 5, 6]
+// Output: 3
+
+// function missingNum(numArr) {
+//     let resultVal;
+//     for (let i = 0; i < numArr.length - 1; i++) {
+//       if (numArr[i + 1] !== numArr[i] + 1) {
+//         resultVal = numArr[i] + 1;
+//       }
+//     }
+//     return resultVal;
+//   }
+  
+//   console.log(missingNum([1, 2, 4, 5, 6])); // 3
+
+
+
+// Two strings are anagrams if they contain the same characters, but the characters may be rearranged. For example, "listen" and "silent" are anagrams.
+
+// Write a function isAnagram(str1, str2) that checks whether str1 is an anagram of str2.
+// console.log(isAnagram("listen", "silent"));  // true
+// console.log(isAnagram("hello", "world"));    // false
+
+// function isAnagram(str1, str2){
+//     let str1Occ = {};
+//     for(let i = 0; i < str1.length; i++){
+//       if(!str1Occ[str1[i]]){
+//         str1Occ[str1[i]] = 1
+//       }else {
+//         str1Occ[str1[i]]++
+//       }
+//     }
+  
+//     let str2Occ = {};
+//     for(let i = 0; i < str2.length; i++){
+//       if(!str2Occ[str2[i]]){
+//         str2Occ[str2[i]] = 1
+//       }else {
+//         str2Occ[str2[i]]++
+//       }
+//     }
+  
+//     for (let char in str1Occ) {
+//       if (str1Occ[char] !== str2Occ[char]) {
+//         return false;
+//       }
+//     }
+  
+//     return true;
+  
+//   }
+  
+//   console.log(isAnagram("listen", "silent"))
+
