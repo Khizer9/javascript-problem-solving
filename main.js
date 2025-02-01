@@ -353,3 +353,111 @@
   
 //   console.log(isAnagram("listen", "silent"))
 
+
+
+// Write a function to find the most frequent element in an array.
+// If there are multiple elements with the same frequency, return any one of them.
+// example:
+// mostFrequent([1, 3, 2, 1, 4, 1, 2, 3, 2, 2]) // 2
+// mostFrequent(["a", "b", "a", "c", "a", "b", "b"]) // "b"
+
+
+// function mostFreq (numArr) {
+//     const occ = {};
+//     for(let i = 0; i < numArr.length; i++){
+//       if(!occ[numArr[i]]){
+//         occ[numArr[i]] = 1
+//       }else {
+//         occ[numArr[i]]++
+//       }
+//     }
+//     const numVal = Object.values(occ);
+//     const maxVal = Math.max(...numVal);
+  
+//     for(let char in occ){
+//       if(occ[char] === maxVal){
+//         return char
+//       }
+//     }
+//   }
+  
+//   console.log(mostFreq([1, 3, 2, 1, 4, 1, 2, 3, 2, 2])) // 2
+
+
+
+// Ek array diya gaya hai, usme se second most frequent element ko find karein.
+// Example:
+
+// function mostFreq(numArr) {
+//     const occ = {};
+//     for (let i = 0; i < numArr.length; i++) {
+//       if (!occ[numArr[i]]) {
+//         occ[numArr[i]] = 1;
+//       } else {
+//         occ[numArr[i]]++;
+//       }
+//     }
+//     console.log(occ);
+//     const occVals = Object.values(occ);
+//     let maxNum = 0;
+//     let secondHighest = 0;
+//     for (let i = 0; i < occVals.length; i++) {
+//       if (occVals[i] > maxNum) {
+//         secondHighest = maxNum;
+//         maxNum = occVals[i];
+//       } else if (occVals[i] > secondHighest && occVals[i] !== maxNum) {
+//         secondHighest = occVals[i];
+//       }
+//     }
+  
+//     for (let key in occ) {
+//       if (occ[key] === secondHighest) {
+//         return key;
+//       }
+//     }
+//   }
+  
+//   console.log(mostFreq([1, 3, 2, 1, 4, 1, 2, 3, 2, 2]));
+
+
+// Write a function that takes two arrays as input and returns an array of their intersection.
+// The intersection includes only elements that are present in both arrays (without duplicates).
+// Example:
+// console.log(findIntersection([1, 2, 2, 1], [2, 2])); // Output: [2]
+// console.log(findIntersection([4, 9, 5], [9, 4, 9, 8, 4])); // Output: [4, 9]
+
+
+// function intersectionArr(arr1, arr2) {
+//     let resultArr = [];
+//     for (let i = 0; i < arr1.length; i++) {
+//       for (let j = 0; j < arr2.length; j++) {
+//         if (arr1[i] === arr2[j] && !resultArr.includes(arr1[i])) {
+//           resultArr.push(arr1[i]);
+//         }
+//       }
+//     }
+//     return resultArr;
+//   }
+  
+//   intersectionArr([4, 9, 5], [9, 4, 9, 8, 4]); // [4, 9]
+  
+
+
+// Write a function that takes an array of numbers as input and returns a new array with all the duplicate numbers removed,
+// without using any built-in Set or similar data structure.
+// removeDuplicates([1, 2, 2, 3, 4, 5, 5, 6]) 
+// should return [1, 2, 3, 4, 5, 6]
+
+// function removeDuplicates(arr) {
+//     const resultedArr = [];
+//     for (let i = 0; i < arr.length; i++) {
+//       if (!resultedArr.includes(arr[i])) {
+//         resultedArr.push(arr[i]);
+//       }
+//     }
+  
+//     return resultedArr;
+//   }
+  
+//   removeDuplicates([1, 2, 2, 3, 4, 5, 5, 6]);
+  
