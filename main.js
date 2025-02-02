@@ -461,3 +461,114 @@
   
 //   removeDuplicates([1, 2, 2, 3, 4, 5, 5, 6]);
   
+
+
+// Write a function longestSubstring that finds the length of the longest substring without repeating characters in a given string.
+// longestSubstring("abcabcbb")  // Should return 3 ("abc")
+// longestSubstring("bbbbb")  // Should return 1 ("b")
+// longestSubstring("pwwkew")  // Should return 3 ("wke")
+
+
+// function longestSubString(str) {
+//     let resultStr = [];
+//     let maxLength = 0;
+  
+//     for (let char of str) {
+//       while (resultStr.includes(char)) {
+//         resultStr.shift(); 
+//       }
+  
+//       resultStr.push(char); 
+//       maxLength = Math.max(maxLength, resultStr.length);
+//     }
+  
+//     return maxLength;
+//   }
+  
+//   console.log(longestSubString('pwwkew')); // Should return 3
+  
+
+// Write a function findPairs that takes an array of integers and a target sum. 
+// The function should return all unique pairs of numbers from the array that add up to the target sum.
+// Example:
+// findPairs([2, 4, 3, 5, 7, 8, 9], 10);
+// Output: [[3, 7], [2, 8]]
+
+
+// function findPairs(numArr, target) {
+//     const resultedArr = [];
+//     for (let i = 0; i < numArr.length; i++) {
+//       for (let j = i + 1; j < numArr.length; j++) {
+//         if (numArr[i] + numArr[j] === target) {
+//           resultedArr.push([numArr[i], numArr[j]]);
+//         }
+//       }
+//     }
+//     return resultedArr;
+//   }
+  
+//   findPairs([2, 4, 3, 5, 7, 8, 9], 10); // [[3, 7], [2, 8]]
+
+
+
+// Write a function that takes a string as input and returns all possible permutations of the string's characters.
+// findPermutations("abc"); 
+// Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
+
+// findPermutations("ab"); 
+// Output: ["ab", "ba"]
+
+// function findPermutations(str) {
+//     // Base case: If string has 1 character, return it as the only permutation
+//     if (str.length === 1) {
+//       return [str];
+//     }
+  
+//     const permutations = [];
+  
+//     // Loop through each character in the string
+//     for (let i = 0; i < str.length; i++) {
+//       const currentChar = str[i];
+//       const remainingStr = str.slice(0, i) + str.slice(i + 1);
+  
+//       // Recursively find permutations of the remaining substring
+//       const remainingPermutations = findPermutations(remainingStr);
+  
+//       // Add the fixed character to each of the permutations of the remaining substring
+//       for (let perm of remainingPermutations) {
+//         permutations.push(currentChar + perm);
+//       }
+//     }
+  
+//     return permutations;
+//   }
+  
+//   // Example usage:
+//   console.log(findPermutations('abc'));
+//   // Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
+  
+
+// Write a function that takes a string as input and returns the first character that does not repeat. If all characters repeat, return null.
+// Input: "swiss"
+// Output: "w"
+
+
+// function nonRepeatingAlp (str) {
+//     const freq = {};
+  
+//     for(let i = 0; i < str.length; i++){ // occurance of each character
+//       if(!freq[str[i]]){
+//         freq[str[i]] = 1
+//       } else {
+//         freq[str[i]]++
+//       }
+//     }
+  
+//     for(let char of str){
+//       if(freq[char] === 1){ // find ki jiski value 1 hai wo return kra
+//         return char
+//       }
+//     }
+//   }
+  
+//   console.log(nonRepeatingAlp("swiss")) // w
