@@ -572,3 +572,75 @@
 //   }
   
 //   console.log(nonRepeatingAlp("swiss")) // w
+
+
+// Write a function that takes a string as input and returns the number of vowels (a, e, i, o, u) present in the string, case-insensitive.
+// Example:
+// Input: "Hello World"
+// Output: 3 (Explanation: The vowels are e, o, o.)
+
+// function countVowels(str) {
+//     const vowels = 'aeiou';
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++) {
+//       if (vowels.includes(str[i])) {
+//         count++;
+//       }
+//     }
+//     return count;
+//   }
+//   console.log(countVowels('Hello World')); // 3
+
+
+
+// Write a function that takes a sentence (a string) and returns the longest word in it.
+// If there are multiple words with the same maximum length, return the first one.
+// console.log(longestWord("The quick brown fox jumps over the lazy dog")); // "quick"
+// console.log(longestWord("Hello world")); // "Hello"
+// console.log(longestWord("A small step for man, a giant leap for mankind")); // "mankind"
+
+// function longestWord (str) {
+//     const splittedWord = str.split(" ")
+    
+//     let maxWord = splittedWord[0];
+//     for(let word of splittedWord){
+//       if(word.length > maxWord.length){
+//         maxWord = word
+//       }
+      
+//     }
+//     console.log(maxWord)
+//   }
+  
+//   longestWord("The quick brown fox jumps over the lazy dog")
+//   longestWord("Hello world") // "Hello"
+//   longestWord("A small step for man, a giant leap for mankind") // "mankind"
+
+
+
+// Write a function moveZeroesToEnd that takes an array of numbers as input and
+// moves all zeroes to the end of the array while keeping the order of non-zero elements intact.
+// moveZeroesToEnd([0, 1, 0, 3, 12]);
+// [1, 3, 12, 0, 0]
+
+
+// function moveZerosToEnd(numArr) {
+//     const resultArr = [];
+//     let countZeros = 0;
+  
+//     for (let i = 0; i < numArr.length; i++) {
+//       if (numArr[i] === 0) {
+//         countZeros++;
+//       } else {
+//         resultArr.push(numArr[i]);
+//       }
+//     }
+//     for (let i = 0; i < countZeros; i++) {
+//       resultArr.push(0);
+//     }
+//     return resultArr;
+//   }
+  
+//   console.log(moveZerosToEnd([0, 1, 0, 3, 12]))
+  
+
