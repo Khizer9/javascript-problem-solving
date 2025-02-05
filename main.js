@@ -644,3 +644,48 @@
 //   console.log(moveZerosToEnd([0, 1, 0, 3, 12]))
   
 
+
+// Write a function to rotate an array k times to the right.
+// console.log(rotateArray([1, 2, 3, 4, 5], 2)); // Output: [4, 5, 1, 2, 3]
+// console.log(rotateArray([1, 2, 3, 4, 5], 3)); // Output: [3, 4, 5, 1, 2]
+// console.log(rotateArray([1, 2, 3], 4)); // Output: [3, 1, 2]|
+
+// function rotateArray(arr, k) {
+//     for (let i = 0; i < k; i++) {
+//       const lastNum = arr.pop();
+//       arr.unshift(lastNum);
+//     }
+//     console.log(arr);
+//   }
+  
+//   rotateArray([1, 2, 3, 4, 5], 2); // Output: [4, 5, 1, 2, 3]
+
+
+// Write a function to find all the prime numbers between 1 and a given number n.
+// Input: findPrimes(10)
+// Output: [2, 3, 5, 7]
+
+// function findPrimes(num) {
+//     const primeNums = [];
+    
+//     for (let i = 2; i <= num; i++) {
+//       let isPrime = true;
+  
+//       // Check if 'i' is divisible by any number from 2 to sqrt(i)
+//       for (let j = 2; j <= Math.sqrt(i); j++) {
+//         if (i % j === 0) {
+//           isPrime = false;
+//           break;
+//         }
+//       }
+  
+//       if (isPrime) {
+//         primeNums.push(i);
+//       }
+//     }
+  
+//     console.log(primeNums);
+//   }
+  
+//   findPrimes(10); // [2, 3, 5, 7]
+  
