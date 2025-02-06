@@ -689,3 +689,101 @@
   
 //   findPrimes(10); // [2, 3, 5, 7]
   
+
+// merge the two strings in the desired pattern by iterating over the characters of both strings and appending them alternately to a result string.
+// str1 = "khizer",
+// str2 = "ali"
+// output: kahliizer
+
+
+// function mergeStrings(str1, str2) {
+//   let result = "";
+//   const maxLength = Math.max(str1.length, str2.length);
+
+//   for (let i = 0; i < maxLength; i++) {
+//     if (i < str1.length) {
+//       result += str1[i];
+//     }
+//     if (i < str2.length) {
+//       result += str2[i];
+//     }
+//   }
+
+//   return result;
+// }
+
+// const str1 = "khizer";
+// const str2 = "ali";
+
+// console.log(mergeStrings(str1, str2)); // Output: kahliizer
+
+
+
+// Write a function to find the majority element in an array. 
+// The majority element is the element that appears more than n/2 times in the array, where n is the size of the array. 
+// If no such element exists, return null.
+
+// console.log(findMajorityElement([3, 3, 4, 2, 4, 4, 2, 4, 4])); // 4
+// console.log(findMajorityElement([3, 3, 4, 2, 4, 4, 2, 4]));    // null
+// console.log(findMajorityElement([1, 1, 1, 1, 2, 3, 4]));       // 1
+
+// function findMajorityElement(numArr) {
+//     const greaterThanThisNum = Math.floor(numArr.length / 2);
+  
+//     const numOcc = {};
+//     for (let num of numArr) {
+//       if (!numOcc[num]) {
+//         numOcc[num] = 1;
+//       } else {
+//         numOcc[num]++;
+//       }
+//     }
+  
+//     for (let value in numOcc) {
+//       if (numOcc[value] > greaterThanThisNum) {
+//         return value;
+//       }
+//     }
+//     return null;
+//   }
+  
+//   console.log(findMajorityElement([3, 3, 4, 2, 4, 4, 2, 4, 4])); // 4
+//   console.log(findMajorityElement([3, 3, 4, 2, 4, 4, 2, 4])); // null
+//   console.log(findMajorityElement([1, 1, 1, 1, 2, 3, 4])); // 1
+  
+
+
+// Write a function to group anagrams together.
+// An anagram is a word or phrase formed by rearranging the letters of another.
+// For example, "listen" and "silent" are anagrams of each other.
+// groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]);
+// // Output: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+
+// groupAnagrams([""]);
+// // Output: [[""]]
+
+// groupAnagrams(["a"]);
+// // Output: [["a"]]
+
+
+// function groupAnagrams(arr) {
+//     const anagramGroups = {};
+  
+//     for (let word of arr) {
+//       const sortedWord = word.split("").sort().join("");
+  
+//       if (!anagramGroups[sortedWord]) {
+//         anagramGroups[sortedWord] = [];
+//       }
+  
+//       anagramGroups[sortedWord].push(word);
+//     }
+  
+//     return Object.values(anagramGroups);
+//   }
+  
+//   console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
+//   // Output: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+  
+
+
