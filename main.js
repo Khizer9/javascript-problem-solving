@@ -787,3 +787,54 @@
   
 
 
+// Write a function longestCommonPrefix that takes an array of strings and returns the longest common prefix among them. 
+// If there is no common prefix, return an empty string.
+// console.log(longestCommonPrefix(["flower", "flow", "flight"])); // Output: "fl"
+// console.log(longestCommonPrefix(["dog", "racecar", "car"]));    // Output: ""
+
+// function longestCommonPrefix (arr) {
+//     let prefix = arr[0];
+//     for(let i = 0; i < arr.length; i++){
+//       console.log(arr[i].indexOf(prefix))
+//       while (arr[i].indexOf(prefix) !== 0) {
+//         console.log(arr[i])
+//         // Hint: yahan prefix ka aakhri character hata do
+//         prefix = prefix.substring(0, prefix.length - 1);
+//         // Agar prefix empty ho gaya, iska matlab koi common prefix nahi hai
+//         if (prefix === "") return "";
+//       }
+//     }
+//     // console.log(prefix)
+//   }
+  
+//   longestCommonPrefix(["flower", "flow", "flight"])
+
+
+// Write a function isValidParentheses that takes a string containing just the characters '(', ')', '{', '}', '[', and ']' and determines if the input string is valid.
+// console.log(isValidParentheses("()[]{}"));  // Output: true
+// console.log(isValidParentheses("([)]"));    // Output: false
+// console.log(isValidParentheses("{[]}"));    // Output: true
+
+// function isValidParentheses(str) {
+//     const bracketObj = {
+//       ')': '(',
+//       '}': '{',
+//       ']': '[',
+//     };
+  
+//     const stack = [];
+  
+//     for (let word of str) {
+//       if (word === '(' || word === '{' || word === '[') {
+//         stack.push(word);
+//       } else if (stack.length === 0 || stack.pop() !== bracketObj[word]) {
+//         return false;
+//       }
+//     }
+  
+//     return stack.length === 0;
+//   }
+  
+//   console.log(isValidParentheses('([)]'));
+  
+
